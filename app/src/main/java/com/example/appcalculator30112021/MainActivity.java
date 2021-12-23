@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Nhập vô ô thứ hai đi kìa", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    String result = number1 + " mũ " + number2 + " = "  +  String.valueOf(pow(Float.valueOf(number1) , Float.valueOf(number2))) ;
+                    String result = number1 + "^" + number2 + " = "  +  String.valueOf(pow(Float.valueOf(number1) , Float.valueOf(number2))) ;
                     mresult.setText(result);
 
                 }
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
 
                     result1 = String.valueOf(sqrt(Float.valueOf(number1)));
                     result2 = String.valueOf(sqrt(Float.valueOf(number2)));
-                    result = "Căn 2 của "+  number1 + " là " + result1 + " \n Căn 2 của " + number2 + " là " + result2;
+                    result = "√"+  number1 + " = " + result1 + " \n √" + number2 + " = " + result2;
                     mresult.setText(result);
 
                 }
@@ -240,13 +240,13 @@ public class MainActivity extends AppCompatActivity {
                 else if(number1.equals(""))
                 {
                     result2 = String.valueOf((Float.valueOf(number2)*(Float.valueOf(number2))));
-                    result = number2 + " mũ 2 = " + result2;
+                    result = number2 + "^2 = " + result2;
                     mresult.setText(result);
                 }
                 else if(number2.equals(""))
                 {
                     result1 = String.valueOf((Float.valueOf(number1)*(Float.valueOf(number1))));
-                    result = number1 + " mũ 2 = " + result1;
+                    result = number1 + "^2 = " + result1;
                     mresult.setText(result);
                 }
 
@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
 
                     result1 = String.valueOf((Float.valueOf(number1)*(Float.valueOf(number1))));
                     result2 = String.valueOf((Float.valueOf(number2)*(Float.valueOf(number2))));
-                    result = number1 + " mũ 2 = " + result1 + " \n " + number2 + " Mũ 2 = " + result2;
+                    result = number1 + "^2 = " + result1 + " \n " + number2 + "^2 = " + result2;
                     mresult.setText(result);
 
                 }

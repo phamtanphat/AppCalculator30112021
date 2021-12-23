@@ -97,14 +97,14 @@
             android:layout_marginStart="0dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Căn bậc 2"/>
+            android:text="√x"/>
         <Button
             android:id="@+id/buttonMuhai"
             android:layout_marginStart="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Mũ hai"/>
+            android:text="X^2"/>
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -118,7 +118,7 @@
             android:layout_marginStart="0dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="A mũ B"/>
+            android:text="A^B"/>
     </LinearLayout>
 
 
