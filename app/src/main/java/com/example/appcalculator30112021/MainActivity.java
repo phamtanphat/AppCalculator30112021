@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
                 mTvResult.setText("Result = " + result);
             }
         });
-        mBtnPlus.setOnClickListener(new View.OnClickListener() {
+        mBtnDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Lấy dữ liêu input
@@ -82,10 +82,15 @@ public class MainActivity extends AppCompatActivity{
                     return;
                 }
 
-                int number1 = Integer.parseInt(textNumber1);
-                int number2 = Integer.parseInt(textNumber2);
-                int result = number1 + number2;
-                mTvResult.setText("Result = " + result);
+                float number1 = Integer.parseInt(textNumber1);
+                float number2 = Integer.parseInt(textNumber2);
+
+                if (number2 == 0){
+                    Toast.makeText(MainActivity.this, "Không chia với số 0", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                float result = number1 / number2;
+                mTvResult.setText("Result = " + String.format("%.02f", result));
             }
         });
     }
