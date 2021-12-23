@@ -85,6 +85,41 @@
             android:textSize="20sp"
             android:text="/"/>
     </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonCanbac2"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Căn bậc 2"/>
+        <Button
+            android:id="@+id/buttonMuhai"
+            android:layout_marginStart="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Mũ hai"/>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonAmuB"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="A mũ B"/>
+    </LinearLayout>
 
 
 </LinearLayout>
