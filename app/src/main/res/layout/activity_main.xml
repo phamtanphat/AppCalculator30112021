@@ -58,33 +58,27 @@
             android:text="+"/>
         <Button
             android:id="@+id/buttonMinus"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="-"/>
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <Button
             android:id="@+id/buttonMultipli"
+            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
-            android:layout_marginStart="0dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="x"/>
         <Button
             android:id="@+id/buttonDev"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="/"/>
     </LinearLayout>
+
     <LinearLayout
         android:gravity="center"
         android:layout_marginTop="20dp"
@@ -100,26 +94,20 @@
             android:text="√x"/>
         <Button
             android:id="@+id/buttonMuhai"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="X^2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <Button
             android:id="@+id/buttonAmuB"
             android:layout_width="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="5dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="A^B"/>
     </LinearLayout>
+
 
 
 </LinearLayout>
