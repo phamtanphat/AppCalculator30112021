@@ -12,11 +12,11 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
-    EditText mEdtNumber1,mEdtNumber2;
+    EditText mEdtNumber1, mEdtNumber2;
     TextView mTvResult;
-    Button mBtnPlus,mBtnMinus,mBtnDivision,mBtnMultiplication;
+    Button mBtnPlus, mBtnMinus, mBtnDivision, mBtnMultiplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +32,6 @@ public class MainActivity extends AppCompatActivity{
         mBtnDivision = findViewById(R.id.buttonDivision);
         mBtnMultiplication = findViewById(R.id.buttonMultiplication);
 
-
-        // Hàm kiểm tra giá trị
-//        int a = 5;
-//        Log.d("BBB",a + "");
-        // Hàm in thông báo
-
-
-//        Toast.makeText(MainActivity.this,"Xin chào",Toast.LENGTH_SHORT).show();
-
-        // bắt sự kiện
         mBtnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,11 +39,11 @@ public class MainActivity extends AppCompatActivity{
                 String textNumber1 = mEdtNumber1.getText().toString();
                 String textNumber2 = mEdtNumber2.getText().toString();
 
-                if (textNumber1.isEmpty() || textNumber2.isEmpty()){
-                    if(textNumber1.isEmpty()){
+                if (textNumber1.isEmpty() || textNumber2.isEmpty()) {
+                    if (textNumber1.isEmpty()) {
                         mEdtNumber1.setError("Input empty");
                     }
-                    if (textNumber2.isEmpty()){
+                    if (textNumber2.isEmpty()) {
                         mEdtNumber2.setError("Input empty");
                     }
                     return;
@@ -72,11 +62,11 @@ public class MainActivity extends AppCompatActivity{
                 String textNumber1 = mEdtNumber1.getText().toString();
                 String textNumber2 = mEdtNumber2.getText().toString();
 
-                if (textNumber1.isEmpty() || textNumber2.isEmpty()){
-                    if(textNumber1.isEmpty()){
+                if (textNumber1.isEmpty() || textNumber2.isEmpty()) {
+                    if (textNumber1.isEmpty()) {
                         mEdtNumber1.setError("Input empty");
                     }
-                    if (textNumber2.isEmpty()){
+                    if (textNumber2.isEmpty()) {
                         mEdtNumber2.setError("Input empty");
                     }
                     return;
@@ -85,7 +75,7 @@ public class MainActivity extends AppCompatActivity{
                 float number1 = Integer.parseInt(textNumber1);
                 float number2 = Integer.parseInt(textNumber2);
 
-                if (number2 == 0){
+                if (number2 == 0) {
                     Toast.makeText(MainActivity.this, "Không chia với số 0", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -93,6 +83,39 @@ public class MainActivity extends AppCompatActivity{
                 mTvResult.setText("Result = " + String.format("%.02f", result));
             }
         });
+
+        mBtnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String n1 = mEdtNumber1.getText().toString();
+                String n2 = mEdtNumber2.getText().toString();
+                if (n1.equals("")) {
+                    Toast.makeText(MainActivity.this, "Nhập dữ liệu", Toast.LENGTH_SHORT).show();
+                } else if (n2.equals("")) {
+                    Toast.makeText(MainActivity.this, "Nhập dữ liệu", Toast.LENGTH_SHORT).show();
+                } else {
+                    String kq = String.valueOf((Float.valueOf(n1)) - (Float.valueOf(n2)));
+                    mTvResult.setText(kq);
+                }
+            }
+        });
+
+        mBtnMultiplication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String n1 = mEdtNumber1.getText().toString();
+                String n2 = mEdtNumber2.getText().toString();
+                if (n1.equals("")) {
+                    Toast.makeText(MainActivity.this, "Nhập dữ liệu", Toast.LENGTH_SHORT).show();
+                } else if (n2.equals("")) {
+                    Toast.makeText(MainActivity.this, "Nhập dữ liệu", Toast.LENGTH_SHORT).show();
+                } else {
+                    String kq = String.valueOf((Float.valueOf(n1)) * (Float.valueOf(n2)));
+                    mTvResult.setText(kq);
+                }
+            }
+        });
+
     }
 
 }
